@@ -54,6 +54,11 @@ module "rains_cafe" {
       name    = "www"
       type    = "CNAME"
       records = ["rain-cafe.github.io"]
+    },
+    {
+      name    = "silvy"
+      type    = "CNAME"
+      records = ["cname.vercel-dns.com"]
     }
   ]
 }
