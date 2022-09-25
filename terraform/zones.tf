@@ -12,29 +12,53 @@ locals {
     "2606:50c0:8002::153",
     "2606:50c0:8003::153",
   ]
+
+  mx_records = [
+    "1 ASPMX.L.GOOGLE.COM",
+    "5 ALT1.ASPMX.L.GOOGLE.COM",
+    "5 ALT2.ASPMX.L.GOOGLE.COM",
+    "10 ALT3.ASPMX.L.GOOGLE.COM",
+    "10 ALT4.ASPMX.L.GOOGLE.COM"
+  ]
 }
 
 module "cecilias_me" {
   source = "./modules/zone"
   domain = "cecilias.me"
 
-  records = [{
-    name    = "github"
-    type    = "CNAME"
-    records = ["https://github.com/cecilia-sanare"]
-    }, {
-    name    = "atm"
-    type    = "A"
-    records = [var.MC_IP_ADDRESS]
-    }, {
-    name    = "smp"
-    type    = "A"
-    records = [var.MC_IP_ADDRESS]
-    }, {
-    name    = "origins"
-    type    = "A"
-    records = [var.MC_IP_ADDRESS]
-  }]
+  records = [
+    {
+      type = "TXT"
+      records = [
+        "google-site-verification=pFsrSZl3l9vbQScTjdtXieVHE1Ce8pkMkZRagaVlzxA"
+      ]
+    },
+    {
+      type    = "MX",
+      records = local.mx_records,
+      ttl     = 3600
+    },
+    {
+      name    = "github"
+      type    = "CNAME"
+      records = ["https://github.com/cecilia-sanare"]
+    },
+    {
+      name    = "atm"
+      type    = "A"
+      records = [var.SERVER_IP_ADDRESS]
+    },
+    {
+      name    = "smp"
+      type    = "A"
+      records = [var.SERVER_IP_ADDRESS]
+    },
+    {
+      name    = "origins"
+      type    = "A"
+      records = [var.SERVER_IP_ADDRESS]
+    },
+  ]
 }
 
 module "rains_cafe" {
@@ -42,6 +66,17 @@ module "rains_cafe" {
   domain = "rains.cafe"
 
   records = [
+    {
+      type = "TXT"
+      records = [
+        "google-site-verification=8n2S6aE0zRfPbVTwhknvMfENZH28tVnlLB60SlxFXwY"
+      ]
+    },
+    {
+      type    = "MX",
+      records = local.mx_records,
+      ttl     = 3600
+    },
     {
       type    = "A"
       records = local.github_pages_ipv4
