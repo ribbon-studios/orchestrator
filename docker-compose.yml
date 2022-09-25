@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  smf:
+    container_name: mail-forwarder
+    image: zixia/simple-mail-forwarder
+    restart: always
+    ports:
+      - "25:25"
+    environment:
+      - SMF_CONFIG="admin@cecilias.me:${CECIS_EMAIL};ceci@rains.cafe:${CECIS_EMAIL}"
+    volumes:
+      - /opt/projects/mail_forwarder/volumes/logs:/var/log/postfix

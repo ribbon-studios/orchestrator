@@ -1,5 +1,5 @@
-variable "MC_IP_ADDRESS" {
+variable "SERVER_IP_ADDRESS" {
   type        = string
-  description = "The ip address of the box that hosts the MC servers"
+  description = "The ip address of the box that hosts the servers"
   sensitive   = true
 }

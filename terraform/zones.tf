@@ -25,15 +25,15 @@ module "cecilias_me" {
     }, {
     name    = "atm"
     type    = "A"
-    records = [var.MC_IP_ADDRESS]
+    records = [var.SERVER_IP_ADDRESS]
     }, {
     name    = "smp"
     type    = "A"
-    records = [var.MC_IP_ADDRESS]
+    records = [var.SERVER_IP_ADDRESS]
     }, {
     name    = "origins"
     type    = "A"
-    records = [var.MC_IP_ADDRESS]
+    records = [var.SERVER_IP_ADDRESS]
   }]
 }
 

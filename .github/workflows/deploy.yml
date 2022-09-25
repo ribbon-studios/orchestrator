@@ -12,7 +12,7 @@ env:
   NAMECHEAP_API_USER: ${{ secrets.NAMECHEAP_USER }}
   NAMECHEAP_API_KEY: ${{ secrets.NAMECHEAP_API_KEY }}
   NAMECHEAP_CLIENT_IP: ${{ secrets.NAMECHEAP_CLIENT_IP }}
-  TF_VAR_MC_IP_ADDRESS: ${{ secrets.MC_IP_ADDRESS }}
+  TF_VAR_SERVER_IP_ADDRESS: ${{ secrets.SERVER_IP_ADDRESS }}
 
 jobs:
   terraform:
@@ -37,7 +37,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-      
+
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
@@ -113,3 +113,20 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
+
+  docker:
+    name: Deploy Containers
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Remote SSH
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script_stop: true
+          script: |
+            export CECIS_EMAIL=${{ secrets.CECIS_EMAIL }}
+            git -C Orchestrator fetch && git -C Orchestrator reset --hard origin/main || git clone https://github.com/cecilia-sanare/Orchestrator.git
+            (cd Orchestrator && ./setup.sh)
