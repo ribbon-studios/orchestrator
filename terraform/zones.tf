@@ -44,16 +44,6 @@ module "cecilias_me" {
       records = ["https://github.com/cecilia-sanare"]
     },
     {
-      name    = "atm"
-      type    = "A"
-      records = [var.SERVER_IP_ADDRESS]
-    },
-    {
-      name    = "smp"
-      type    = "A"
-      records = [var.SERVER_IP_ADDRESS]
-    },
-    {
       name    = "origins"
       type    = "A"
       records = [var.SERVER_IP_ADDRESS]
@@ -84,6 +74,16 @@ module "rains_cafe" {
     {
       type    = "AAAA"
       records = local.github_pages_ipv6
+    },
+    {
+      name    = "origins.mc"
+      type    = "A"
+      records = [var.SERVER_IP_ADDRESS]
+    },
+    {
+      name    = "k8s-cluster"
+      type    = "A"
+      records = [var.SERVER_IP_ADDRESS]
     },
     {
       name    = "www"
