@@ -81,7 +81,7 @@ module "rains_cafe" {
       records = [var.SERVER_IP_ADDRESS]
     },
     {
-      name    = "k8s-cluster"
+      name    = "*.staging"
       type    = "A"
       records = [var.SERVER_IP_ADDRESS]
     },
