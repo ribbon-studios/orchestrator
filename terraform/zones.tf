@@ -93,7 +93,7 @@ module "rains_cafe" {
     {
       name    = "silvy"
       type    = "CNAME"
-      records = ["celadon-queijadas-e1c9ae.netlify.app"]
+      records = ["rain-silvy.netlify.app"]
     }
   ]
 }
