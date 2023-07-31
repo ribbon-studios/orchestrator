@@ -39,6 +39,14 @@ module "cecilias_me" {
       ttl     = 3600
     },
     {
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+    {
       name    = "github"
       type    = "CNAME"
       records = ["https://github.com/cecilia-sanare"]
