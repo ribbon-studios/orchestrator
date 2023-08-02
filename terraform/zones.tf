@@ -102,6 +102,11 @@ module "rains_cafe" {
       name    = "silvy"
       type    = "CNAME"
       records = ["rain-silvy.netlify.app"]
+    },
+    {
+      name    = "utils"
+      type    = "CNAME"
+      records = ["rain-cafe-utils.netlify.app"]
     }
   ]
 }
