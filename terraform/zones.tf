@@ -107,6 +107,11 @@ module "rains_cafe" {
       name    = "utils"
       type    = "CNAME"
       records = ["rain-cafe-utils.netlify.app"]
+    },
+    {
+      name    = "refreshly"
+      type    = "CNAME"
+      records = ["9d61994484-hosting.gitbook.io"]
     }
   ]
 }
