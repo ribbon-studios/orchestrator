@@ -5,15 +5,14 @@ terraform {
     region = "ca-central-1"
   }
 
+  # NOTE: We can't utilize the terraform provider for namecheap
+  # This is due to namecheap having a whitelist for their api of allowed ips
+  # GitHub Actions uses a massive list of CIDRs for its IPs so its not
+  # feasible to whitelist them all
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
-    }
-
-    namecheap = {
-      source  = "namecheap/namecheap"
-      version = "2.1.0"
     }
   }
 }
@@ -28,5 +27,3 @@ provider "aws" {
     }
   }
 }
-
-provider "namecheap" {}

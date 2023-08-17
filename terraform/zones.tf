@@ -101,3 +101,11 @@ module "devkit_lgbt" {
   domain = "devkit.lgbt"
   google = "hhjM8G0PQBxkse8KHJkvmP8H9N5YrGJr31G8tYbfa_c"
 }
+
+output "name_servers" {
+  value = {
+    "cecilias.me" = module.cecilias_me.name_servers
+    "rains.cafe"  = module.rains_cafe.name_servers
+    "devkit.lgbt" = module.devkit_lgbt.name_servers
+  }
+}
