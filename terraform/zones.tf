@@ -31,7 +31,7 @@ module "cecilias_me" {
     {
       name    = "fin"
       type    = "A"
-      records = ["75.162.59.46"]
+      records = ["97.125.128.38"]
     },
     {
       name    = "github"
