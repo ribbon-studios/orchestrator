@@ -34,6 +34,11 @@ module "cecilias_me" {
       records = ["97.125.128.38"]
     },
     {
+      name    = "panel"
+      type    = "A"
+      records = ["97.125.128.38"]
+    },
+    {
       name    = "github"
       type    = "CNAME"
       records = ["https://github.com/cecilia-sanare"]
