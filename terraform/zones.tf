@@ -12,6 +12,8 @@ locals {
     "2606:50c0:8002::153",
     "2606:50c0:8003::153",
   ]
+
+  ddns = "97.125.243.46"
 }
 
 module "cecilias_me" {
@@ -31,12 +33,12 @@ module "cecilias_me" {
     {
       name    = "fin"
       type    = "A"
-      records = ["97.125.128.38"]
+      records = [local.ddns]
     },
     {
       name    = "panel"
       type    = "A"
-      records = ["97.125.128.38"]
+      records = [local.ddns]
     },
     {
       name    = "github"
