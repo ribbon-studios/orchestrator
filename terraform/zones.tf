@@ -41,6 +41,11 @@ module "cecilias_me" {
       records = [local.ddns]
     },
     {
+      name    = "node"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
       name    = "github"
       type    = "CNAME"
       records = ["https://github.com/cecilia-sanare"]
