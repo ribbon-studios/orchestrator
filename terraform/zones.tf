@@ -13,7 +13,7 @@ locals {
     "2606:50c0:8003::153",
   ]
 
-  ddns = "75.162.109.227"
+  ddns = "97.125.253.147"
 }
 
 module "cecilias_me" {
@@ -32,6 +32,11 @@ module "cecilias_me" {
     },
     {
       name    = "fin"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
+      name    = "cafe"
       type    = "A"
       records = [local.ddns]
     },
