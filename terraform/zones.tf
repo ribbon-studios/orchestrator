@@ -112,6 +112,11 @@ module "rains_cafe" {
       name    = "refreshly"
       type    = "CNAME"
       records = ["9d61994484-hosting.gitbook.io"]
+    },
+    {
+      name    = "flarie"
+      type    = "CNAME"
+      records = ["dfa3a8b5de-hosting.gitbook.io"]
     }
   ]
 }
