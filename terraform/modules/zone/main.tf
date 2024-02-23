@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    namecheap = {
-      source  = "namecheap/namecheap"
-      version = "2.1.0"
-    }
-  }
-}
-
 locals {
   mx_records = [
     "1 ASPMX.L.GOOGLE.COM",
@@ -42,13 +33,6 @@ resource "aws_route53_zone" "zone" {
   }
 }
 
-resource "namecheap_domain_records" "domain" {
-  domain = var.domain
-  mode   = "OVERWRITE"
-
-  nameservers = aws_route53_zone.zone.name_servers
-}
-
 resource "aws_route53_record" "record" {
   for_each = { for record in local.records : "${record.name}.${var.domain}_${record.type}" => record }
 
@@ -57,4 +41,8 @@ resource "aws_route53_record" "record" {
   type    = each.value.type
   ttl     = each.value.ttl
   records = each.value.records
+}
+
+output "name_servers" {
+  value = aws_route53_zone.zone.name_servers
 }
