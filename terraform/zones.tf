@@ -104,6 +104,17 @@ module "devkit_lgbt" {
   source = "./modules/zone"
   domain = "devkit.lgbt"
   google = "hhjM8G0PQBxkse8KHJkvmP8H9N5YrGJr31G8tYbfa_c"
+
+  records = [
+    {
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    }
+  ]
 }
 
 module "charcoal_gg" {
