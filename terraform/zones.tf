@@ -93,7 +93,7 @@ module "rains_cafe" {
     {
       name    = "silvy"
       type    = "CNAME"
-      records = ["apex-loadbalancer.netlify.com"]
+      records = ["celadon-queijadas-e1c9ae.netlify.app"]
     }
   ]
 }
