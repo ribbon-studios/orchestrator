@@ -99,6 +99,16 @@ module "rains_cafe" {
       records = ["rain-cafe.github.io"]
     },
     {
+      name    = "zelda"
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      name    = "zelda"
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+    {
       name    = "silvy"
       type    = "CNAME"
       records = ["rain-silvy.netlify.app"]
