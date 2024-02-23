@@ -95,11 +95,16 @@ module "rains_cafe" {
   ]
 }
 
-
 module "devkit_lgbt" {
   source = "./modules/zone"
   domain = "devkit.lgbt"
   google = "hhjM8G0PQBxkse8KHJkvmP8H9N5YrGJr31G8tYbfa_c"
+}
+
+module "charcoal_gg" {
+  source = "./modules/zone"
+  domain = "charcoal.gg"
+  google = "bVauXlt-AWWHjES1jiZqqdubCwmV6p10aFlbJXDtkMA"
 }
 
 output "name_servers" {
