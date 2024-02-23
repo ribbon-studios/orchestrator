@@ -20,8 +20,3 @@ variable "records" {
     error_message = "Record Type must be 'A', 'AAAA', 'CAA', 'CNAME', 'DS', 'MX', 'NAPTR', 'NS', 'PTR', 'SOA', 'SPF', 'SRV', or 'TXT'."
   }
 }
-
-variable "google" {
-  type        = string
-  description = "Google Workspaces domain verification code"
-}

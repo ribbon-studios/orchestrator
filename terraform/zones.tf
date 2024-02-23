@@ -19,7 +19,6 @@ locals {
 module "cecilias_me" {
   source = "./modules/zone"
   domain = "cecilias.me"
-  google = "pFsrSZl3l9vbQScTjdtXieVHE1Ce8pkMkZRagaVlzxA"
 
   records = [
     {
@@ -61,7 +60,6 @@ module "cecilias_me" {
 module "rains_cafe" {
   source = "./modules/zone"
   domain = "rains.cafe"
-  google = "8n2S6aE0zRfPbVTwhknvMfENZH28tVnlLB60SlxFXwY"
 
   records = [
     {
@@ -120,7 +118,6 @@ module "rains_cafe" {
 module "devkit_lgbt" {
   source = "./modules/zone"
   domain = "devkit.lgbt"
-  google = "hhjM8G0PQBxkse8KHJkvmP8H9N5YrGJr31G8tYbfa_c"
 
   records = [
     {
@@ -137,7 +134,6 @@ module "devkit_lgbt" {
 module "charcoal_gg" {
   source = "./modules/zone"
   domain = "charcoal.gg"
-  google = "bVauXlt-AWWHjES1jiZqqdubCwmV6p10aFlbJXDtkMA"
 
   records = [
     {
@@ -157,5 +153,6 @@ output "name_servers" {
     "cecilias.me" = module.cecilias_me.name_servers
     "rains.cafe"  = module.rains_cafe.name_servers
     "devkit.lgbt" = module.devkit_lgbt.name_servers
+    "charcoal.gg" = module.charcoal_gg.name_servers
   }
 }
