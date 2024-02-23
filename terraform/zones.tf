@@ -93,7 +93,7 @@ module "rains_cafe" {
     {
       name    = "silvy"
       type    = "CNAME"
-      records = ["cname.vercel-dns.com"]
+      records = ["apex-loadbalancer.netlify.com"]
     }
   ]
 }
