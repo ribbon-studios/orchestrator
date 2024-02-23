@@ -148,11 +148,19 @@ module "charcoal_gg" {
   ]
 }
 
+module "sanare_dev" {
+  source = "./modules/zone"
+  domain = "sanare.dev"
+
+  records = []
+}
+
 output "name_servers" {
   value = {
     "cecilias.me" = module.cecilias_me.name_servers
     "rains.cafe"  = module.rains_cafe.name_servers
     "devkit.lgbt" = module.devkit_lgbt.name_servers
     "charcoal.gg" = module.charcoal_gg.name_servers
+    "sanare.dev"  = module.sanare_dev.name_servers
   }
 }
