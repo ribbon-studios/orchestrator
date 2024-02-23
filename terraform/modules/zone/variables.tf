@@ -5,7 +5,7 @@ variable "domain" {
 
 variable "records" {
   type = list(object({
-    name    = string,
+    name    = optional(string, ""),
     type    = string,
     ttl     = optional(number, 300),
     records = list(string)

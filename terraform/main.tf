@@ -10,16 +10,9 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.0"
     }
-
-    github = {
-      source  = "integrations/github"
-      version = "~> 4.0"
-    }
   }
 }
 
 provider "aws" {
   region = "ca-central-1"
 }
-
-provider "github" {}

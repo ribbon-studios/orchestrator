@@ -1,8 +1,17 @@
-data "github_ip_ranges" "latest" {}
-
 locals {
-  allowed_ip_ranges_ipv4 = [for github_cidr in data.github_ip_ranges.latest.pages_ipv4 : replace(github_cidr, "/32", "")]
-  allowed_ip_ranges_ipv6 = [for github_cidr in data.github_ip_ranges.latest.pages_ipv6 : replace(github_cidr, "/128", "")]
+  github_pages_ipv4 = [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153",
+  ]
+
+  github_pages_ipv6 = [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153",
+  ]
 }
 
 module "cecilias_me" {
@@ -34,14 +43,12 @@ module "rains_cafe" {
 
   records = [
     {
-      name    = "@"
       type    = "A"
-      records = local.allowed_ip_ranges_ipv4
+      records = local.github_pages_ipv4
     },
     {
-      name    = "@"
       type    = "AAAA"
-      records = local.allowed_ip_ranges_ipv6
+      records = local.github_pages_ipv6
     }
   ]
 }
