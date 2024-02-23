@@ -21,13 +21,6 @@ module "cecilias_me" {
 
   records = [
     {
-      name = "_github-challenge-rain-cafe-org"
-      type = "TXT"
-      records = [
-        "943ed230f8"
-      ]
-    },
-    {
       type    = "A"
       records = local.github_pages_ipv4
     },
@@ -49,6 +42,13 @@ module "rains_cafe" {
   google = "8n2S6aE0zRfPbVTwhknvMfENZH28tVnlLB60SlxFXwY"
 
   records = [
+    {
+      name = "_github-challenge-rain-cafe-org"
+      type = "TXT"
+      records = [
+        "943ed230f8"
+      ]
+    },
     {
       type    = "A"
       records = local.github_pages_ipv4
