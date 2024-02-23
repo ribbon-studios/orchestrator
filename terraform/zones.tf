@@ -29,6 +29,10 @@ module "cecilias_me" {
       records = local.github_pages_ipv6
     },
     {
+      type    = "A"
+      records = ["75.162.59.46"]
+    },
+    {
       name    = "github"
       type    = "CNAME"
       records = ["https://github.com/cecilia-sanare"]
