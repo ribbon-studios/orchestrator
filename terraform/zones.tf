@@ -110,6 +110,18 @@ module "charcoal_gg" {
   source = "./modules/zone"
   domain = "charcoal.gg"
   google = "bVauXlt-AWWHjES1jiZqqdubCwmV6p10aFlbJXDtkMA"
+
+  records = [
+    {
+      type    = "ALIAS"
+      records = ["apex-loadbalancer.netlify.com"]
+    },
+    {
+      name    = "www"
+      type    = "CNAME"
+      records = ["charcoal-gg.netlify.app"]
+    },
+  ]
 }
 
 output "name_servers" {
