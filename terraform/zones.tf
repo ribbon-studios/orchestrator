@@ -28,6 +28,13 @@ module "cecilias_me" {
 
   records = [
     {
+      name = "_github-challenge-rain-cafe-org"
+      type = "TXT"
+      records = [
+        "943ed230f8"
+      ]
+    },
+    {
       type = "TXT"
       records = [
         "google-site-verification=pFsrSZl3l9vbQScTjdtXieVHE1Ce8pkMkZRagaVlzxA"
