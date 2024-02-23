@@ -12,7 +12,7 @@ env:
   NAMECHEAP_API_USER: ${{ secrets.NAMECHEAP_USER }}
   NAMECHEAP_API_KEY: ${{ secrets.NAMECHEAP_API_KEY }}
   NAMECHEAP_CLIENT_IP: ${{ secrets.NAMECHEAP_CLIENT_IP }}
-  TF_VAR_MC_IP_ADDRESS: ${{ secrets.MC_IP_ADDRESS }}
+  TF_VAR_SERVER_IP_ADDRESS: ${{ secrets.SERVER_IP_ADDRESS }}
 
 jobs:
   terraform:
@@ -37,7 +37,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-      
+
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
@@ -47,7 +47,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color -input=false
         continue-on-error: true
-
 
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
