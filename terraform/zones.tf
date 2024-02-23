@@ -49,6 +49,11 @@ module "rains_cafe" {
     {
       type    = "AAAA"
       records = local.github_pages_ipv6
+    },
+    {
+      name    = "www"
+      type    = "CNAME"
+      records = ["rain-cafe.github.io"]
     }
   ]
 }
