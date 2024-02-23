@@ -113,8 +113,8 @@ module "charcoal_gg" {
 
   records = [
     {
-      type    = "ALIAS"
-      records = ["apex-loadbalancer.netlify.com"]
+      type    = "A"
+      records = ["75.2.60.5"]
     },
     {
       name    = "www"
