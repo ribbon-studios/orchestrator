@@ -20,41 +20,7 @@ module "cecilias_me" {
   source = "./modules/zone"
   domain = "cecilias.me"
 
-  records = [
-    {
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      type    = "AAAA"
-      records = local.github_pages_ipv6
-    },
-    {
-      name    = "fin"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "cafe"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "panel"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "node"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "github"
-      type    = "CNAME"
-      records = ["https://github.com/cecilia-sanare"]
-    },
-  ]
+  records = []
 }
 
 module "rains_cafe" {
@@ -152,7 +118,41 @@ module "sanare_dev" {
   source = "./modules/zone"
   domain = "sanare.dev"
 
-  records = []
+  records = [
+    {
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+    {
+      name    = "fin"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
+      name    = "cafe"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
+      name    = "panel"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
+      name    = "node"
+      type    = "A"
+      records = [local.ddns]
+    },
+    {
+      name    = "github"
+      type    = "CNAME"
+      records = ["https://github.com/cecilia-sanare"]
+    },
+  ]
 }
 
 output "name_servers" {
