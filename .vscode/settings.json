@@ -6,5 +6,9 @@
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.formatOnSaveMode": "file",
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
+  },
+  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
 }

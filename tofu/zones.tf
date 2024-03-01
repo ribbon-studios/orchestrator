@@ -13,7 +13,7 @@ locals {
     "2606:50c0:8003::153",
   ]
 
-  ddns = "97.125.241.157"
+  ddns = "c2420122.eero.online"
 }
 
 module "cecilias_me" {
@@ -129,28 +129,13 @@ module "sanare_dev" {
     },
     {
       name    = "fin"
-      type    = "A"
+      type    = "CNAME"
       records = [local.ddns]
     },
     {
       name    = "cafe"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "panel"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "node"
-      type    = "A"
-      records = [local.ddns]
-    },
-    {
-      name    = "github"
       type    = "CNAME"
-      records = ["https://github.com/cecilia-sanare"]
+      records = [local.ddns]
     },
   ]
 }
