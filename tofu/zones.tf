@@ -59,6 +59,16 @@ module "rains_cafe" {
       records = local.github_pages_ipv6
     },
     {
+      name    = "tweaks"
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      name    = "tweaks"
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+    {
       name    = "silvy"
       type    = "CNAME"
       records = ["rain-silvy.netlify.app"]
