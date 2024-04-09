@@ -35,59 +35,6 @@ module "rains_cafe" {
         "943ed230f8"
       ]
     },
-    {
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      type    = "AAAA"
-      records = local.github_pages_ipv6
-    },
-    {
-      name    = "www"
-      type    = "CNAME"
-      records = ["rain-cafe.github.io"]
-    },
-    {
-      name    = "zelda"
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      name    = "zelda"
-      type    = "AAAA"
-      records = local.github_pages_ipv6
-    },
-    {
-      name    = "tweaks"
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      name    = "tweaks"
-      type    = "AAAA"
-      records = local.github_pages_ipv6
-    },
-    {
-      name    = "silvy"
-      type    = "CNAME"
-      records = ["rain-silvy.netlify.app"]
-    },
-    {
-      name    = "utils"
-      type    = "CNAME"
-      records = ["rain-cafe-utils.netlify.app"]
-    },
-    {
-      name    = "refreshly"
-      type    = "CNAME"
-      records = ["9d61994484-hosting.gitbook.io"]
-    },
-    {
-      name    = "flarie"
-      type    = "CNAME"
-      records = ["dfa3a8b5de-hosting.gitbook.io"]
-    }
   ]
 }
 
@@ -196,6 +143,36 @@ module "ribbonstudios_com" {
       type    = "AAAA"
       records = local.github_pages_ipv6
     },
+    {
+      name    = "zelda"
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      name    = "zelda"
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+    {
+      name    = "silvy"
+      type    = "CNAME"
+      records = ["rain-silvy.netlify.app"]
+    },
+    {
+      name    = "utils"
+      type    = "CNAME"
+      records = ["rain-cafe-utils.netlify.app"]
+    },
+    {
+      name    = "refreshly"
+      type    = "CNAME"
+      records = ["9d61994484-hosting.gitbook.io"]
+    },
+    {
+      name    = "flarie"
+      type    = "CNAME"
+      records = ["dfa3a8b5de-hosting.gitbook.io"]
+    }
   ]
 }
 
