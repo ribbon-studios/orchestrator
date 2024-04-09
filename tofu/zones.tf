@@ -166,7 +166,7 @@ module "ribbonstudios_com" {
     {
       name    = "refreshly"
       type    = "CNAME"
-      records = ["9d61994484-hosting.gitbook.io"]
+      records = ["dfa3a8b5de-hosting.gitbook.io"]
     },
     {
       name    = "flarie"
