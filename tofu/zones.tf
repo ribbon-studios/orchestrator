@@ -176,6 +176,22 @@ module "protontweaks_com" {
   ]
 }
 
+module "ribbonstudios_com" {
+  source = "./modules/zone"
+  domain = "ribbonstudios.com"
+
+  records = [
+    {
+      type    = "A"
+      records = local.github_pages_ipv4
+    },
+    {
+      type    = "AAAA"
+      records = local.github_pages_ipv6
+    },
+  ]
+}
+
 output "name_servers" {
   value = {
     "cecilias.me" = module.cecilias_me.name_servers
@@ -184,5 +200,6 @@ output "name_servers" {
     "charcoal.gg" = module.charcoal_gg.name_servers
     "sanare.dev"  = module.sanare_dev.name_servers
     "protontweaks.com"  = module.protontweaks_com.name_servers
+    "ribbonstudios.com"  = module.ribbonstudios_com.name_servers
   }
 }
