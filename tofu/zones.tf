@@ -182,6 +182,13 @@ module "ribbonstudios_com" {
 
   records = [
     {
+      name = "_github-challenge-rain-cafe-org"
+      type = "TXT"
+      records = [
+        "6cb6707451"
+      ]
+    },
+    {
       type    = "A"
       records = local.github_pages_ipv4
     },
