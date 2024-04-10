@@ -112,13 +112,8 @@ module "protontweaks_com" {
     },
     {
       name    = "api"
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      name    = "api"
-      type    = "AAAA"
-      records = local.github_pages_ipv6
+      type    = "CNAME"
+      records = ["ribbon-studios.github.io"]
     },
   ]
 }
@@ -145,13 +140,8 @@ module "ribbonstudios_com" {
     },
     {
       name    = "zelda"
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      name    = "zelda"
-      type    = "AAAA"
-      records = local.github_pages_ipv6
+      type    = "CNAME"
+      records = ["ribbon-studios.github.io"]
     },
     {
       name    = "silvy"
