@@ -168,12 +168,12 @@ module "ribbonstudios_com" {
 
 output "name_servers" {
   value = {
-    "cecilias.me" = module.cecilias_me.name_servers
-    "rains.cafe"  = module.rains_cafe.name_servers
-    "devkit.lgbt" = module.devkit_lgbt.name_servers
-    "charcoal.gg" = module.charcoal_gg.name_servers
-    "sanare.dev"  = module.sanare_dev.name_servers
+    "cecilias.me"       = module.cecilias_me.name_servers
+    "rains.cafe"        = module.rains_cafe.name_servers
+    "devkit.lgbt"       = module.devkit_lgbt.name_servers
+    "charcoal.gg"       = module.charcoal_gg.name_servers
+    "sanare.dev"        = module.sanare_dev.name_servers
     "protontweaks.com"  = module.protontweaks_com.name_servers
-    "ribbonstudios.com"  = module.ribbonstudios_com.name_servers
+    "ribbonstudios.com" = module.ribbonstudios_com.name_servers
   }
 }
