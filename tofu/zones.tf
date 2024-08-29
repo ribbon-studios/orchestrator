@@ -144,11 +144,6 @@ module "ribbonstudios_com" {
       records = ["ribbon-studios.github.io"]
     },
     {
-      name    = "silvy"
-      type    = "CNAME"
-      records = ["rain-silvy.netlify.app"]
-    },
-    {
       name    = "utils"
       type    = "CNAME"
       records = ["rain-cafe-utils.netlify.app"]
