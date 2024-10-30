@@ -90,6 +90,11 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
+      name    = "docs"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
+    {
       name    = "cafe"
       type    = "CNAME"
       records = [local.ddns]
