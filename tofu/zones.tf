@@ -77,6 +77,11 @@ module "sanare_dev" {
 
   records = [
     {
+      name    = "_atproto"
+      type    = "TXT"
+      records = ["did=did:plc:v752poqqndkxxcpayq44s5n3"]
+    },
+    {
       type    = "A"
       records = local.github_pages_ipv4
     },
