@@ -134,6 +134,11 @@ module "ribbonstudios_com" {
 
   records = [
     {
+      name    = "_atproto"
+      type    = "TXT"
+      records = ["did=did:plc:qdtgu5fzproijomwnoi2yjyb"]
+    },
+    {
       name = "_github-challenge-rain-cafe-org"
       type = "TXT"
       records = [
