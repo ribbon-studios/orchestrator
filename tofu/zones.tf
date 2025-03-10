@@ -38,22 +38,6 @@ module "rains_cafe" {
   ]
 }
 
-module "devkit_lgbt" {
-  source = "./modules/zone"
-  domain = "devkit.lgbt"
-
-  records = [
-    {
-      type    = "A"
-      records = local.github_pages_ipv4
-    },
-    {
-      type    = "AAAA"
-      records = local.github_pages_ipv6
-    }
-  ]
-}
-
 module "charcoal_gg" {
   source = "./modules/zone"
   domain = "charcoal.gg"
@@ -177,6 +161,11 @@ module "ribbonstudios_com" {
       name    = "flarie"
       type    = "CNAME"
       records = ["dfa3a8b5de-hosting.gitbook.io"]
+    },
+    {
+      name    = "devkit"
+      type    = "CNAME"
+      records = ["ribbon-studios.github.io"]
     }
   ]
 }
