@@ -23,38 +23,6 @@ module "cecilias_me" {
   records = []
 }
 
-module "rains_cafe" {
-  source = "./modules/zone"
-  domain = "rains.cafe"
-
-  records = [
-    {
-      name = "_github-challenge-rain-cafe-org"
-      type = "TXT"
-      records = [
-        "943ed230f8"
-      ]
-    },
-  ]
-}
-
-module "charcoal_gg" {
-  source = "./modules/zone"
-  domain = "charcoal.gg"
-
-  records = [
-    {
-      type    = "A"
-      records = ["75.2.60.5"]
-    },
-    {
-      name    = "www"
-      type    = "CNAME"
-      records = ["charcoal-gg.netlify.app"]
-    },
-  ]
-}
-
 module "sanare_dev" {
   source = "./modules/zone"
   domain = "sanare.dev"
@@ -173,8 +141,6 @@ module "ribbonstudios_com" {
 output "name_servers" {
   value = {
     "cecilias.me"       = module.cecilias_me.name_servers
-    "rains.cafe"        = module.rains_cafe.name_servers
-    "charcoal.gg"       = module.charcoal_gg.name_servers
     "sanare.dev"        = module.sanare_dev.name_servers
     "protontweaks.com"  = module.protontweaks_com.name_servers
     "ribbonstudios.com" = module.ribbonstudios_com.name_servers
