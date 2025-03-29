@@ -134,6 +134,11 @@ module "ribbonstudios_com" {
       name    = "devkit"
       type    = "CNAME"
       records = ["ribbon-studios.github.io"]
+    },
+    {
+      name    = "tyria"
+      type    = "CNAME"
+      records = ["ribbon-studios.github.io"]
     }
   ]
 }
