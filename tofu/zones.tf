@@ -16,13 +16,6 @@ locals {
   ddns = "c2420122.eero.online"
 }
 
-module "cecilias_me" {
-  source = "./modules/zone"
-  domain = "cecilias.me"
-
-  records = []
-}
-
 module "sanare_dev" {
   source = "./modules/zone"
   domain = "sanare.dev"
@@ -145,7 +138,6 @@ module "ribbonstudios_com" {
 
 output "name_servers" {
   value = {
-    "cecilias.me"       = module.cecilias_me.name_servers
     "sanare.dev"        = module.sanare_dev.name_servers
     "protontweaks.com"  = module.protontweaks_com.name_servers
     "ribbonstudios.com" = module.ribbonstudios_com.name_servers
