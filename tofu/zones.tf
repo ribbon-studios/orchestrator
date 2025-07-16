@@ -53,6 +53,11 @@ module "sanare_dev" {
       name    = "mc"
       type    = "CNAME"
       records = [local.ddns]
+    },
+    {
+      name    = "git"
+      type    = "CNAME"
+      records = [local.ddns]
     }
   ]
 }
