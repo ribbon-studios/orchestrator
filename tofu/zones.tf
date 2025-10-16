@@ -45,7 +45,7 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
-      name    = "cafe"
+      name    = "music"
       type    = "CNAME"
       records = [local.ddns]
     },
@@ -54,11 +54,6 @@ module "sanare_dev" {
       type    = "CNAME"
       records = [local.ddns]
     },
-    {
-      name    = "git"
-      type    = "CNAME"
-      records = [local.ddns]
-    }
   ]
 }
 
