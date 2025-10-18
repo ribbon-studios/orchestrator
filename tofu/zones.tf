@@ -50,7 +50,12 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
-      name    = "books"
+      name    = "sonarr"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
+    {
+      name    = "prowlarr"
       type    = "CNAME"
       records = [local.ddns]
     },
