@@ -45,17 +45,7 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
-      name    = "music"
-      type    = "CNAME"
-      records = [local.ddns]
-    },
-    {
-      name    = "sonarr"
-      type    = "CNAME"
-      records = [local.ddns]
-    },
-    {
-      name    = "prowlarr"
+      name    = "arr"
       type    = "CNAME"
       records = [local.ddns]
     },
