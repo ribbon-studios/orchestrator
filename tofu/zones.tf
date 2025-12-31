@@ -55,6 +55,11 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
+      name    = "tv"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
+    {
       name    = "emu"
       type    = "CNAME"
       records = [local.ddns]
