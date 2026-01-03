@@ -69,6 +69,11 @@ module "sanare_dev" {
       type    = "CNAME"
       records = [local.ddns]
     },
+    {
+      name    = "books"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
   ]
 }
 
