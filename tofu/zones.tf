@@ -40,6 +40,11 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
+      name    = "seer"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
+    {
       name    = "docs"
       type    = "CNAME"
       records = [local.ddns]
