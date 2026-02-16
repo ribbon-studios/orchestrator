@@ -84,6 +84,11 @@ module "sanare_dev" {
       type    = "CNAME"
       records = [local.ddns]
     },
+    {
+      name    = "vw"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
   ]
 }
 
