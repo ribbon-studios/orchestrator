@@ -89,6 +89,21 @@ module "sanare_dev" {
       type    = "CNAME"
       records = [local.ddns]
     },
+    {
+      name    = "em1059123"
+      type    = "CNAME"
+      records = ["return.smtp2go.net"]
+    },
+    {
+      name    = "s1059123._domainkey"
+      type    = "CNAME"
+      records = ["dkim.smtp2go.net"]
+    },
+    {
+      name    = "link"
+      type    = "CNAME"
+      records = ["track.smtp2go.net"]
+    }
   ]
 }
 
