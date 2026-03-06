@@ -90,6 +90,11 @@ module "sanare_dev" {
       records = [local.ddns]
     },
     {
+      name    = "penpot"
+      type    = "CNAME"
+      records = [local.ddns]
+    },
+    {
       name    = "em1059123"
       type    = "CNAME"
       records = ["return.smtp2go.net"]
